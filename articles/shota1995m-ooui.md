@@ -3,8 +3,9 @@ title: "オブジェクト指向UIデザインを読んだから図解してみ�
 emoji: "🎨"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["技術書", "ooui", "ui", "uiuxdesign", "design"]
-published: false
+published: true
 publication_name: "stafes_blog"
+published_at: 2022-12-10
 ---
 
 この記事は、[スターフェスティバル Advent Calendar 2022](https://qiita.com/advent-calendar/2022/stafes)の10日目の記事です。
