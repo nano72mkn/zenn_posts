@@ -140,7 +140,7 @@ fit 方法も、`Cover`や`Fill`などいろいろ選べます！
 
 元気よく動いていますね！（可動部分ふやしてみました！
 
-![Webで動く様子](/images/shota1995m-rive-app/web_animation.png)
+@[codesandbox](https://codesandbox.io/embed/ecstatic-mahavira-7p3hfi?fontsize=14&hidenavigation=1&theme=dark)
 
 # まとめ
 
