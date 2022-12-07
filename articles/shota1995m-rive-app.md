@@ -67,7 +67,7 @@ https://undraw.co/illustrations
 AE と同じようにキーフレームを打ってみると....
 
 しっぽが動きました！！
-![しっぽアニメーション](/images/shota1995m-rive-app/tail_animate.png)
+![しっぽアニメーション](https://user-images.githubusercontent.com/10015803/206233505-4d41b8f3-34ae-4865-8dd1-c3ec45454f00.png)
 
 アニメーションの作り方に関しては、公式からチュートリアル、ドキュメントがあるので見てみてください！
 （みてるだけでワクワクする）
