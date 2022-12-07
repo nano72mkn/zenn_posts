@@ -3,8 +3,7 @@ title: "WebアニメーションはRiveが便利！"
 emoji: "🎥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["rive","react"]
-published: false
-publication_name: "stafes_blog"
+published: true
 ---
 
 みなさんは、Webアニメーション使っていますか？
