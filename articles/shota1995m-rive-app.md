@@ -2,7 +2,7 @@
 title: "WebアニメーションはRiveが便利！"
 emoji: "🎥"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["rive", "react"]
+topics: ["rive", "react", "frontend"]
 published: true
 ---
 
