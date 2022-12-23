@@ -62,8 +62,6 @@ useEffect(() => {
 
   return <></>;
 };
-
-export default Component;
 ```
 
 （サンプルのため、雑に useEffect を使っています！ごめんなさい！）
@@ -141,7 +139,7 @@ useEffect(() => {
 import { useEffect, useState, FC } from "react";
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
-const Component: FC = () => {
+export default Component: FC = () => {
 +  const [uri, setUri] = useState<string | null>(null);
   useEffect(() => {
     (async () => {
@@ -176,8 +174,6 @@ const Component: FC = () => {
 +    ></iframe>
   );
 };
-
-export default Component;
 ```
 
 こんな感じで PDF を生成できます。
