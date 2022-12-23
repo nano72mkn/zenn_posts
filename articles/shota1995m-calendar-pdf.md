@@ -63,7 +63,7 @@ import { useEffect, FC } from "react";
 import { PDFDocument } from "pdf-lib";
 
 export default Component: FC = () => {
-useEffect(() => {
+  useEffect(() => {
     (async () => {
       const pdfDoc = await PDFDocument.create();
     })();
