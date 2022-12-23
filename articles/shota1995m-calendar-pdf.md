@@ -80,7 +80,7 @@ useEffect(() => {
 ```diff tsx:index.tsx
 ...
 export default Component: FC = () => {
-useEffect(() => {
+  useEffect(() => {
     (async () => {
       const pdfDoc = await PDFDocument.create();
 +      const page = pdfDoc.addPage([595.28, 841.89]); // A4
@@ -98,7 +98,7 @@ useEffect(() => {
 ```diff tsx:index.tsx
 ...
 export default Component: FC = () => {
-useEffect(() => {
+  useEffect(() => {
     (async () => {
       const pdfDoc = await PDFDocument.create();
 +      const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
@@ -119,7 +119,7 @@ useEffect(() => {
 + import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
 export default Component: FC = () => {
-useEffect(() => {
+  useEffect(() => {
     (async () => {
       const pdfDoc = await PDFDocument.create();
       const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
