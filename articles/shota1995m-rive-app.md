@@ -147,7 +147,7 @@ fit 方法も、`Cover`や`Fill`などいろいろ選べます！
 Rive 一本だけで web で動作するところまでいけるのは本当にすごいですよね！
 
 昨日見つけてテンション上がりまくり太郎でした！
-https://twitter.com/shota1995m/status/1600138751690231809?s=20&t=sqGA-dUARKkHMes07WVexA
+https://twitter.com/nano72mkn/status/1600138751690231809?s=20&t=sqGA-dUARKkHMes07WVexA
 
 別の作業しながらでしたが、
 見つけでドキュメントを読んでから React で動かすまで約 1 時間で出来、Lottie と比べても学習コストはだいぶ低いと思います！
