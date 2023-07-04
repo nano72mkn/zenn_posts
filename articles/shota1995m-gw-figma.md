@@ -7,7 +7,7 @@ published: true
 publication_name: "stafes_blog"
 ---
 
-スターフェスティバル株式会社 エンジニアの[@shota1995m](https://stafes.notion.site/stafes/d0996a00d77d418280982797c7e16001?p=8b0ee9b8d8c34418a243cc9a586702d1) です！
+スターフェスティバル株式会社 エンジニアの[@nano72mkn](https://stafes.notion.site/stafes/d0996a00d77d418280982797c7e16001?p=8b0ee9b8d8c34418a243cc9a586702d1) です！
 
 今回は、GW にエンジニアが Figma に入門した時のこれ覚えておけば Figma 活用できるんじゃない（個人的意見）のまとめをしていこうと思います！
 
