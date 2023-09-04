@@ -19,7 +19,15 @@ Adobe の After Effects（AE）がないとアニメーションが作れない�
 最近では AE を使わなくてもアニメーションを作れるようにと`Lottie Lab`というサービスが開発されていたりします。
 https://lottielab.com/
 
-しかし、まだまだ公開には至っていない状態です。（2022/12/07 現在）
+~~しかし、まだまだ公開には至っていない状態です。（2022/12/07 現在）~~
+
+:::message
+追記：
+Lottielab が 2023/8/15 に Product Hunt からローンチされました！
+https://www.producthunt.com/products/lottielab
+
+現在 Lottie を使用している方は Lottielab を一度試してみてください！
+:::
 
 # そこで、Rive 登場
 
