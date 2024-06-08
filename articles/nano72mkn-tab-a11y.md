@@ -36,7 +36,7 @@ roleとaria属性を付与してアクセシビリティ対応をする。
 - `tabpanel`
 
 #### tabとtablist
-タブには`tab`、複数のタブを囲っている要素に`tablist`を付与する
+タブには`tab`、複数のタブを囲っている要素には`tablist`のroleを付与する
 ![タブにはtab、タブを複数まとめたものにはtablistのroleをつける](</images/nano72mkn-tab-a11y/tab_role-1-2.png>)
 
 ```html
@@ -51,6 +51,7 @@ roleとaria属性を付与してアクセシビリティ対応をする。
 ```
 
 #### tabpanel
+タブパネルに`tabpanel`のroleをつける
 ![タブパネルにtabpanelのroleをつける](</images/nano72mkn-tab-a11y/tab_role-3.png>)
 ```html
 <div id="tab">
@@ -67,6 +68,20 @@ roleとaria属性を付与してアクセシビリティ対応をする。
 #### `tablist`に`aria-label`をつける
 タブにフォーカスした際に何のタブグループなのかを知らせるための`aria-label`を設定します。
 
+```html
+<div id="tab">
+  <div role="tablist" aria-label="hoge">
+    <button role="tab">Tab1</button>
+    <button　role="tab">Tab2</button>
+    <button　role="tab">Tab3</button>
+  </div>
+  ...
+<div>
+```
+
+上記の実装で、「Tab1」にフォーカスがあたった際に **「Tab1、選択中、タブ、1/3、hoge、 タブグループ」** と読み上げてくれます。
+※ hogeが`aria-label`で指定したテキスト
+
 #### `tab`に`aria-selected`をつける
 どのタブが選択されているかを判定できるようにするために、`aria-selected`を付与します。
 また、別のタブを選択したときに`aria-selected`の状態を切り替えます。
@@ -82,11 +97,14 @@ WCAGの達成基準2.1.1で下記のように言われております。
 
 この項目はレベルAなので、対応していきます。
 
-タブUIでクリアするべきキーボードの操作は３つ。
+タブUIでクリアするべきキーボードの操作は4つあるので一つづつ対応します。
 
+#### `tab`のフォーカスを左右キーで移動させる
+#### フォーカスが`tablist`の外から移動してくる場合、アクティブな`tab`に移動させる
+#### フォーカスがアクティブな`tab`にある場合、紐づいている`tabpanel`に移動させる
 
-#### 
-#### `tabpanel`に`tabindex`をつける
+#### おまけ： `tab`にフォーカスが当たっている時にDeleteキーを押したら削除
+`tab`が削除可能な場合は、Deleteキーで選択されているタブを削除できるようにする必要があります。
 
 ### aria属性
 
