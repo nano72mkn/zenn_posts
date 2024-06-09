@@ -44,8 +44,8 @@ roleとaria属性を付与してアクセシビリティ対応をする。
 <div id="tab">
   <div role="tablist">
     <button role="tab">Tab1</button>
-    <button　role="tab">Tab2</button>
-    <button　role="tab">Tab3</button>
+    <button role="tab">Tab2</button>
+    <button role="tab">Tab3</button>
   </div>
   ...
 <div>
