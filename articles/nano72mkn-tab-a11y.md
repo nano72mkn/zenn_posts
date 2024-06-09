@@ -7,7 +7,7 @@ published: false
 ---
 
 どうも、[nano72mkn](https://x.com/nano72mkn)です。
-アクセシブルなタブUIを作ったので、実装時に調べたことやポイントをまとめます。
+アクセシビリティを意識してタブUIを作ったので、実装時に調べたことやポイントをまとめます。
 
 ## タブUIについて
 
@@ -73,8 +73,8 @@ roleとaria属性を付与してアクセシビリティ対応をする。
 <div id="tab">
   <div role="tablist" aria-label="hoge">
     <button role="tab">Tab1</button>
-    <button　role="tab">Tab2</button>
-    <button　role="tab">Tab3</button>
+    <button role="tab">Tab2</button>
+    <button role="tab">Tab3</button>
   </div>
   ...
 <div>
@@ -91,30 +91,56 @@ roleとaria属性を付与してアクセシビリティ対応をする。
 <div id="tab">
   <div role="tablist" aria-label="hoge">
     <button role="tab" aria-selected="true">Tab1</button>
-    <button　role="tab" aria-selected="false">Tab2</button>
-    <button　role="tab" aria-selected="false">Tab3</button>
+    <button role="tab" aria-selected="false">Tab2</button>
+    <button role="tab" aria-selected="false">Tab3</button>
   </div>
   ...
 <div>
 ```
 
 #### `tab`と`tabpanel`を紐づける
+紐づける為にやることが２つあります
 
+1. `tab`に`aria-controls`を指定
+2. `tabpanel`に`aria-labelledby`を指定
 
+```html
+<div id="tab">
+  <div role="tablist" aria-label="hoge">
+    <button
+      role="tab"
+      id="tab-1"
+      aria-selected="true"
+      aria-controls="tabpanel-1">
+      Tab1
+    </button>
+    ...
+  </div>
+  <div
+    role="tabpanel"
+    id="tabpanel-1"
+    aria-labelledby="tab-1">
+    Tab Panel 1
+  </div>
+  ...
+<div>
+```
 
-#### `tabpanel`に`hidden`をつける
-表示されているタブパネル以外には`hidden`を付与し、非表示にします。
+`aria-labelledby`の影響で、タブパネルにフォーカスを当てたときにも **「本文、Tab1、タブパネル」** とタブのラベルも読み上げてくれます。
+
+#### `tabpanel`に`display: none;`をつける
+表示されているタブパネル以外には`display: none;`を付与し非表示にします。
 
 ```html
 <div id="tab">
   ...
   <div role="tabpanel">Tab Panel 1</div>
-  <div role="tabpanel" hidden>Tab Panel 2</div>
-  <div role="tabpanel" hidden>Tab Panel 3</div>
+  <div role="tabpanel" style="display: none;">Tab Panel 2</div>
+  <div role="tabpanel" style="display: none;">Tab Panel 3</div>
 </div>
 ```
 
-※`hidden`属性を付与しているときは、すでにアクセシビリティツリーから削除されているため`aria-hidden`は不要です。
+※`display: none;`を付与しているときは、すでにアクセシビリティツリーから削除されているため`aria-hidden`は不要です。
 
 ### キーボードで操作できるようにする
 WCAGの達成基準2.1.1で下記のように言われております。
@@ -142,27 +168,42 @@ vue.jsであれば、`@keydown.right`と`@keydown.left`を使うとサクッと�
 <div id="tab">
   <div role="tablist" aria-label="hoge">
     <button role="tab" aria-selected="false" tabindex="-1">Tab1</button>
-    <button　role="tab" aria-selected="true" tabindex="0">Tab2</button>
-    <button　role="tab" aria-selected="false" tabindex="-1">Tab3</button>
+    <button role="tab" aria-selected="true" tabindex="0">Tab2</button>
+    <button role="tab" aria-selected="false" tabindex="-1">Tab3</button>
   </div>
   ...
 <div>
 ```
+
+アクティブなタブは`tabindex`を0にし、それ以外は`tabindex`を-1にしてフォーカスが当たらないようにします。
 
 ![フォーカスが外の要素からタブに移動する際に、アクティブなタブに移動する様子](/images/nano72mkn-tab-a11y/focus_move_2.gif)
 
 外の要素から「Tab1」をスキップし、「Tab2」にフォーカスが移動することを確認できます。
 
 #### フォーカスがアクティブな`tab`にある場合、紐づいている`tabpanel`に移動させる
+`tabindex="0"`を付与するだけで対応できます。
+
+```html
+<div id="tab">
+  ...
+  <div role="tabpanel" tabindex="0">Tab Panel 1</div>
+  <div role="tabpanel" tabindex="0">Tab Panel 2</div>
+  <div role="tabpanel" tabindex="0">Tab Panel 3</div>
+</div>
+```
+
+![フォーカスがアクティブなタブから対象のタブパネルに移動する様子](/images/nano72mkn-tab-a11y/focus_move_3.gif)
+
+フォーカスが「Tab2」から「Tab3」ではなく、直接紐づいているタブへ移動しているのを確認できます。
 
 #### おまけ： `tab`にフォーカスが当たっている時にDeleteキーを押したら削除
 `tab`が削除可能な場合は、Deleteキーで選択されているタブを削除できるようにする必要があります。
 
-### aria属性
-
-## 実装のポイント
-
 ## まとめ
+上記対応を行うと、下記codepenのようになります。
+@[codepen](https://codepen.io/miyahirashota/pen/WNBEzRq)
+
 以上が、タブUIをアクセシブルにするためのポイントでした。
 UIライブラリを使っていると、わからないような細かい対応もあり、とても楽しく実装できました。
 
@@ -170,7 +211,10 @@ UIライブラリを使っていると、わからないような細かい対応
 最後まで読んでいただきありがとうございました。
 
 ## 参考
+サクッと説明しちゃっているので、詳しく知りたい方は、下記参考記事を読んでみてください！
 - [ARIA: tab ロール | mdn web docs](https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [aria-hidden | mdn web docs](https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+- [aria-controls | mdn web docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+- [tabindex | mdn web docs](https://developer.mozilla.org/ja/docs/Web/HTML/Global_attributes/tabindex)
 - [Webアプリケーションアクセシビリティ ――今日から始める現場からの改善](https://gihyo.jp/book/2023/978-4-297-13366-5)
 - [達成基準 2.1.1: キーボードを理解する](https://waic.jp/translations/WCAG21/Understanding/keyboard.html)
