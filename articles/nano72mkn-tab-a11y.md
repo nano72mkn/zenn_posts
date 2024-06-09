@@ -4,6 +4,7 @@ emoji: "👌"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["frontend", "a11y", "アクセシビリティ", "ui"]
 published: true
+publication_name: "stafes_blog"
 ---
 
 どうも、[nano72mkn](https://x.com/nano72mkn)です。
