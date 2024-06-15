@@ -213,7 +213,7 @@ UIライブラリを使っていると、わからないような細かい対応
 
 ## 参考
 サクッと説明しちゃっているので、詳しく知りたい方は、下記参考記事を読んでみてください！
-- [ARIA: tab ロール | mdn web docs](https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+- [ARIA: tab ロール | mdn web docs](https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Roles/tab_role)
 - [aria-hidden | mdn web docs](https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [aria-controls | mdn web docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [tabindex | mdn web docs](https://developer.mozilla.org/ja/docs/Web/HTML/Global_attributes/tabindex)
