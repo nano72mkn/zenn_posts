@@ -238,7 +238,7 @@ checkPath.lineTo(40, 70);
 checkPath.lineTo(85, 35);
 ```
 
-感性したものを`Canvas`で描画すると
+完成したものを`Canvas`で描画すると
 ```tsx
 <Path path={checkPath} color="#3ea8ff" style="stroke" strokeWidth={10} />
 ```
