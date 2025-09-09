@@ -62,11 +62,9 @@ Health Literacy Onlineでは、高齢者やロービジョンのユーザー向�
 
 基準に沿って作ったダイアログと、シニア向けに対策したダイアログを比較してみましょう。
 
-![基準](/images/nano72mkn-senior-ui/frontendo2025-8808.png =300x)
-*基準に沿って作ったダイアログ*
-
-![シニア向け](/images/nano72mkn-senior-ui/frontendo2025-8809.png =300x)
-*シニア向けに対策したダイアログ*
+| 基準に沿って作ったダイアログ | シニア向けに対策したダイアログ |
+| --- | --- |
+| ![基準](/images/nano72mkn-senior-ui/frontendo2025-8808.png =300x) | ![シニア向け](/images/nano72mkn-senior-ui/frontendo2025-8809.png =300x) |
 
 より見やすくなっていることが分かります。
 
