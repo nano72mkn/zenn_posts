@@ -4,7 +4,7 @@ emoji: "📺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["react", "reactnative", "vegaos", "firetv", "frontend"]
 publication_name: "stafes_blog"
-published_at: 2025-12-06 7:00
+published_at: 2025-12-06 07:00
 published: true
 ---
 
