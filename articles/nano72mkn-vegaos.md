@@ -7,6 +7,8 @@ publication_name: "stafes_blog"
 published_at: 2025-12-06 07:00
 published: true
 ---
+どうも、[nano72mkn](https://x.com/nano72mkn)です。
+この記事は[スタフェス アドベントカレンダー 2025](https://qiita.com/advent-calendar/2025/stafes)の6日目の記事です。
 
 ## はじめに
 2025/11/26に開催された[React Native Meetup #23](https://react-native-meetup.connpass.com/event/373376/)で「VegaOS」というものを知りました。
