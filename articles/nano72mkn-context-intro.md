@@ -4,7 +4,7 @@ emoji: "🧠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["claudecode", "ai", "llm", "anthropic", "contextengineering"]
 publication_name: "stafes_blog"
-published: false
+published: true
 ---
 
 どうも、[nano72mkn](https://x.com/nano72mkn)です。
